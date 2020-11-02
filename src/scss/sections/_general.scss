@@ -1,0 +1,48 @@
+.container {
+    background-color: $white;
+    border-radius: 3px;
+    height: auto;
+    margin: 30px auto;
+    padding: 0 15px 18px 15px;
+    width: 1110px;
+    header {
+        align-items: center;
+        background-color:$bluegray;
+        border-radius: 3px 3px 0 0;
+        color: $white;
+        display: flex;
+        height: 65px;
+        justify-content: space-between;
+        margin: 0 -15px; 
+        padding: 0 15px;
+        width: 100%; 
+        h2 {
+            font-size: $size-xl;
+            font-weight: 500;
+            padding-left: 13px;
+            span {
+                font-weight: 700;
+            }
+        }  
+        #add-new-employee {
+            align-items: center;
+            background-color: $lightgreen;
+            border: none;
+            border-radius: 2px;
+            color: $white;
+            cursor: pointer;
+            display: flex;
+            font-family: $font-family;
+            margin-right: 15px;
+            outline: none;
+            padding: 8px 12px;
+            &:hover {
+                background-color: $darkgreen;
+            }
+            i {
+                font-size: $size-l;
+                padding-right: 5px;
+            }
+        } 
+    }
+}

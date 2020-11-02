@@ -1,7 +1,12 @@
-// Abstract
+// abstract
 @import "./abstract/variables";
 
-// Sections
+// components
+@import "./components//filter";
+@import "./components/modal";
+@import "./components//table";
+
+// sections
 @import "./sections/general";
 
 body {

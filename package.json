@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/mariagaa993/tp3-ada/issues"
   },
-  "homepage": "https://github.com/mariagaa993/tp3-ada#readme"
+  "homepage": "https://github.com/mariagaa993/tp3-ada#readme",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
 }

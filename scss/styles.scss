@@ -1,11 +1,12 @@
 // Abstract
-@import "./abstract/variables";
+@import './abstract/variables';
 
 // Sections
-@import "./sections/general";
+@import './sections/general';
+@import './sections/modal';
 
 body {
-    background-color: #f5f5f5;
-    font-family: $font-family;
-    margin: 0;
+	background-color: #f5f5f5;
+	font-family: $font-family;
+	margin: 0;
 }

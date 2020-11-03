@@ -1,0 +1,17 @@
+
+// abstract
+@import "./abstract/variables";
+
+// components
+@import "./components//filter";
+@import "./components/modal";
+@import "./components//table";
+
+// sections
+@import "./sections/general";
+
+body {
+    background-color: #f5f5f5;
+    font-family: $font-family;
+    margin: 0;
+}

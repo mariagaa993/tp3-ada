@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/mariagaa993/tp3-ada#readme",
   "dependencies": {
+<<<<<<< HEAD
     "node-sass": "^5.0.0"
+=======
+    "axios": "^0.21.0"
+>>>>>>> f1e4e545f1a30fb80fa9d24b9e50cf7da2e7a695
   }
 }

@@ -1,0 +1,112 @@
+.overlay {
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.modal {
+    background: #fbfbfb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: none;
+    left: calc(30vw - 276px);
+    padding: 25px 15px;
+    position: fixed;
+    top: 5vw;
+    width: 1100px;
+    z-index: 100;
+    text-align: center;
+    header {
+        align-items: center;
+        background-color: #fbfbfb;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 28px;
+        .title-form {
+            margin : 0;
+        }
+    }
+    #close-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        img {
+            width: 18px;
+        }
+    }
+    form {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px 15px;
+        width: 100%;   
+        .form-group {
+            input {
+                border: 1px solid rgba(0,0,0,.250);
+                box-sizing: border-box;
+                font-family: $font-family;
+                font-size: $size-m;
+                margin: 8px;
+                padding: 13px 13px 13px 8px;  
+                width: 500px;
+                &:focus {
+                    outline: 1px solid rgba(0,0,0,.2);
+                }
+            }
+            .text-danger {
+                color: red;
+                display: none;
+                margin: 0 0 25px 8px;
+                width: 500px;
+            }
+        }
+    }
+    .btn-action, .btn-cancelar, .btn-delete {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: $font-family;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 20px;
+        outline: none;
+        padding: 13px;
+        text-transform: uppercase;
+        transition: .3s linear;
+        color: #FDF6F6;
+    }
+    .btn-action {
+        background-color: $lightgreen;
+        width: 50%;
+        &:hover {
+            background-color: darken($lightgreen, 20);
+        }
+    } 
+    .btn-delete {
+        background-color: $red;
+        width: 20%;
+        margin-right: 30px;
+        &:hover {
+            background-color: darken($red, 20);
+        }
+    }  
+    .btn-cancelar {
+        background-color: $lightgray;
+        color: black;
+        width: 20%;
+        &:hover {
+            background-color: darken($lightgray, 20);
+        }
+    }     
+    h2{
+        text-align: center;
+        font-size: 1.3rem;
+    }      
+}

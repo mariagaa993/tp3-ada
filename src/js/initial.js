@@ -24,6 +24,12 @@ const table = user => {
     checkbox.type = "checkbox";
     checkbox.name = "prueba";
 
+    const add = document.createElement("button");
+    add.type = "button";
+    add.id = "add-button"
+    add.addEventListener('click', () => addUser(user.id));
+    add.innerHTML= `<i class="material-icons" title="Add">&#xE254;</i>`;
+
     const edit = document.createElement("button");
     edit.type = "button";
     edit.id = "edit-button"

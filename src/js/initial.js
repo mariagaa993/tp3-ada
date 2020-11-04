@@ -30,7 +30,8 @@ const table = dataUsers => {
 
         const remove = document.createElement("button");
         remove.type = "button";
-        remove.id = "remove-button"
+        remove.id = "remove-button";
+        remove.addEventListener('click', () => deleteUser(user));
         remove.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;
         
         tdActions.appendChild(edit);

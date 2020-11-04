@@ -19,6 +19,7 @@
     top: 5vw;
     width: 1100px;
     z-index: 100;
+    text-align: center;
     header {
         align-items: center;
         background-color: #fbfbfb;
@@ -66,24 +67,46 @@
                 width: 500px;
             }
         }
-        .btn-action {
-            background-color: $lightgreen;
-            border: none;
-            border-radius: 5px;
-            color: #FDF6F6;
-            cursor: pointer;
-            font-family: $font-family;
-            font-size: 15px;
-            font-weight: 600;
-            margin-top: 20px;
-            outline: none;
-            padding: 13px;
-            text-transform: uppercase;
-            transition: .3s linear;
-            width: 50%;
-            &:hover {
-                background-color: darken($lightgreen, 20);
-            }
-        }          
     }
+    .btn-action, .btn-cancelar, .btn-delete {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: $font-family;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 20px;
+        outline: none;
+        padding: 13px;
+        text-transform: uppercase;
+        transition: .3s linear;
+        color: #FDF6F6;
+    }
+    .btn-action {
+        background-color: $lightgreen;
+        width: 50%;
+        &:hover {
+            background-color: darken($lightgreen, 20);
+        }
+    } 
+    .btn-delete {
+        background-color: $red;
+        width: 20%;
+        margin-right: 30px;
+        &:hover {
+            background-color: darken($red, 20);
+        }
+    }  
+    .btn-cancelar {
+        background-color: $lightgray;
+        color: black;
+        width: 20%;
+        &:hover {
+            background-color: darken($lightgray, 20);
+        }
+    }     
+    h2{
+        text-align: center;
+        font-size: 1.3rem;
+    }      
 }

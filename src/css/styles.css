@@ -39,8 +39,7 @@
   position: fixed;
   top: 5vw;
   width: 1100px;
-  z-index: 100;
-  text-align: center; }
+  z-index: 100; }
   .modal header {
     align-items: center;
     background-color: #fbfbfb;
@@ -79,9 +78,11 @@
       display: none;
       margin: 0 0 25px 8px;
       width: 500px; }
-  .modal .btn-action, .modal .btn-cancelar, .modal .btn-delete {
+  .modal .btn-action {
+    background-color: #5cb85c;
     border: none;
     border-radius: 5px;
+    color: #FDF6F6;
     cursor: pointer;
     font-family: "Varela Round", sans-serif;
     font-size: 15px;
@@ -91,27 +92,59 @@
     padding: 13px;
     text-transform: uppercase;
     transition: .3s linear;
-    color: #FDF6F6; }
-  .modal .btn-action {
-    background-color: #5cb85c;
     width: 50%; }
     .modal .btn-action:hover {
       background-color: #357935; }
-  .modal .btn-delete {
-    background-color: #dc3545;
-    width: 20%;
-    margin-right: 30px; }
-    .modal .btn-delete:hover {
-      background-color: #921925; }
-  .modal .btn-cancelar {
-    background-color: #ccc;
-    color: black;
-    width: 20%; }
-    .modal .btn-cancelar:hover {
-      background-color: #999999; }
-  .modal h2 {
-    text-align: center;
-    font-size: 1.3rem; }
+
+.delete-modal {
+  background: #fbfbfb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: none;
+  left: 30vw;
+  padding: 25px 15px;
+  position: fixed;
+  top: 10vw;
+  width: 530px;
+  z-index: 100;
+  text-align: center; }
+  .delete-modal header {
+    align-items: center;
+    background-color: #fbfbfb;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 28px; }
+    .delete-modal header .title-delete-modal {
+      margin: 0; }
+  .delete-modal .confirmation-message {
+    margin: 0;
+    padding-top: 25px; }
+  .delete-modal .container-btns {
+    padding-top: 5px; }
+    .delete-modal .container-btns #btn-delete, .delete-modal .container-btns #btn-cancel {
+      border: none;
+      border-radius: 5px;
+      color: #FDF6F6;
+      cursor: pointer;
+      font-family: "Varela Round", sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin-right: 5px;
+      margin-top: 20px;
+      outline: none;
+      padding: 10px;
+      text-transform: uppercase;
+      transition: .3s linear;
+      width: 20%; }
+    .delete-modal .container-btns #btn-delete {
+      background-color: #dc3545; }
+      .delete-modal .container-btns #btn-delete:hover {
+        background-color: #921925; }
+    .delete-modal .container-btns #btn-cancel {
+      background-color: #ccc; }
+      .delete-modal .container-btns #btn-cancel:hover {
+        background-color: #999999; }
 
 .container-table {
   display: flex;

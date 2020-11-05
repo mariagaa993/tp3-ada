@@ -1,12 +1,10 @@
 const form = document.querySelector("#form");
 const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal");
+const deleteModal = document.querySelector(".delete-modal");
 const close = document.querySelector("#close-button");
+const closeDeleteM = document.querySelector("#btn-cancel");
 const btn = document.querySelector("#btn-action");
-
-const titulo = document.createElement("h2");
-const btnConfirmar = document.createElement("button");
-const btnCancelar = document.createElement("button");
 
 const openEditModal = () => {
     overlay.style.display = "inline";
@@ -23,41 +21,25 @@ const openAddModal = () => {
     form.reset();
 };
 
-const openDeleteModal = (user, eliminarConfirmado) => {
-    form.style.display = "none"
+const openDeleteModal = user => {
     overlay.style.display = "inline";
-    modal.style.display = "inline";
-    document.querySelector(".form-title").innerText = "Delete User"
-
-    titulo.innerText = `¿Está segurx que desea eliminar a ${user.fullname} de la lista?`;
-    btnConfirmar.innerText = "Eliminar";
-    btnConfirmar.classList.add("btn-delete")
-    btnCancelar.innerText = "Cancelar";
-    btnCancelar.classList.add("btn-cancelar")
-
-    modal.appendChild(titulo);
-    modal.appendChild(btnConfirmar);
-    modal.appendChild(btnCancelar);
-    btnConfirmar.addEventListener('click', eliminarConfirmado)
-    btnCancelar.addEventListener('click', closeDeleteModal) 
-    close.addEventListener("click", closeDeleteModal)
-}
-
-const closeDeleteModal = () => {
-    form.style.display = "flex"
-    overlay.style.display = "none";
-    modal.style.display = "none";
-    titulo.remove();
-    btnConfirmar.remove();
-    btnCancelar.remove();
-}
+    deleteModal.style.display = "inline";
+    document.querySelector(".confirmation-message").innerText = `Are you sure you want to remove ${user.fullname} from the list?`;
+};
 
 const closeModal = () => {
     close.addEventListener("click", () => {
         overlay.style.display = "none";
         modal.style.display = "none";
     });
-}
+};
+
+const closeDeleteModal = () => {
+    closeDeleteM.addEventListener("click", () => {
+        overlay.style.display = "none";
+        deleteModal.style.display = "none";
+    });
+};
 
 const removeErrors = (errorName, errorEmail, errorAddress, errorPhone) => {
     close.addEventListener("click", () => {

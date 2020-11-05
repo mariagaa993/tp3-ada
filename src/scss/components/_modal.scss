@@ -19,7 +19,6 @@
     top: 5vw;
     width: 1100px;
     z-index: 100;
-    text-align: center;
     header {
         align-items: center;
         background-color: #fbfbfb;
@@ -28,7 +27,7 @@
         justify-content: space-between;
         padding: 0 28px;
         .title-form {
-            margin : 0;
+            margin: 0;
         }
     }
     #close-button {
@@ -68,9 +67,11 @@
             }
         }
     }
-    .btn-action, .btn-cancelar, .btn-delete {
+    .btn-action {
+        background-color: $lightgreen;
         border: none;
         border-radius: 5px;
+        color: #FDF6F6;
         cursor: pointer;
         font-family: $font-family;
         font-size: 15px;
@@ -80,33 +81,70 @@
         padding: 13px;
         text-transform: uppercase;
         transition: .3s linear;
-        color: #FDF6F6;
-    }
-    .btn-action {
-        background-color: $lightgreen;
         width: 50%;
         &:hover {
             background-color: darken($lightgreen, 20);
-        }
-    } 
-    .btn-delete {
-        background-color: $red;
-        width: 20%;
-        margin-right: 30px;
-        &:hover {
-            background-color: darken($red, 20);
-        }
+        } 
     }  
-    .btn-cancelar {
-        background-color: $lightgray;
-        color: black;
-        width: 20%;
-        &:hover {
-            background-color: darken($lightgray, 20);
+}
+
+// delete modal
+.delete-modal {
+    background: #fbfbfb;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: none;
+    left: 30vw;
+    padding: 25px 15px;
+    position: fixed;
+    top: 10vw;
+    width: 530px;
+    z-index: 100;
+    text-align: center;
+    header {
+        align-items: center;
+        background-color: #fbfbfb;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 28px;
+        .title-delete-modal {
+            margin: 0;
         }
-    }     
-    h2{
-        text-align: center;
-        font-size: 1.3rem;
-    }      
+    }
+    .confirmation-message {
+        margin: 0;
+        padding-top: 25px;
+    }
+    .container-btns {
+        padding-top: 5px;
+        #btn-delete, #btn-cancel {
+            border: none;
+            border-radius: 5px;
+            color: #FDF6F6;
+            cursor: pointer;
+            font-family: $font-family;
+            font-size: 15px;
+            font-weight: 600;
+            margin-right: 5px;
+            margin-top: 20px;
+            outline: none;
+            padding: 10px;
+            text-transform: uppercase;
+            transition: .3s linear;
+            width: 20%;
+        }
+        #btn-delete {
+            background-color: $red;
+            &:hover {
+                background-color: darken($red, 20);
+            }
+        }
+        #btn-cancel {
+            background-color: $lightgray;
+            &:hover {
+                background-color: darken($lightgray, 20);
+            }
+        }
+    }
 }

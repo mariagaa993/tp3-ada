@@ -1,1 +1,0 @@
-const functions = require('../js/funcionalidades');
